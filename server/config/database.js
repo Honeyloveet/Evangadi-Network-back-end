@@ -8,6 +8,7 @@ const pool = mysql.createPool({
     connectTimeout: 60 * 60 * 1000,
     acquireTimeout: 60 * 60 * 1000,
     timeout: 60 * 60 * 1000,
+    port:process.env.DB_PORT||3306,
     connectionLimit: 10
 });
 
