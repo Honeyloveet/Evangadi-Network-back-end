@@ -2,13 +2,13 @@ const mysql = require('mysql');
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
+    port:process.env.DB_PORT,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.MYSQL_DB,
     connectTimeout: 60 * 60 * 1000,
     acquireTimeout: 60 * 60 * 1000,
     timeout: 60 * 60 * 1000,
-    port:process.env.DB_PORT||3306,
     connectionLimit: 10
 });
 
